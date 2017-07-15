@@ -5,10 +5,24 @@ img {
 .jumbotron {
   background-color: crimson;
   width: 100%;
+  color: white;
+  text-align: center;
 }
-.form {
+form {
   margin-left: 15px;
 }
-.pizzas {
+#pizzas {
   display: none;
+}
+input[type="text"] {
+  width: 33%;
+  display: block;
+}
+#add-pie {
+  align-items: left;
+  background-color: crimson;
+}
+#submit-order {
+  background-color: crimson;
+  color: white;
 }

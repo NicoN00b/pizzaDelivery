@@ -13,12 +13,12 @@
       <div class="jumbotron">
         <h1>Pizza the Hutt: Criminally Good Pizza!</h1>
       </div>
-      <div class="form" id="new-pie">
+      <form id="new-pie">
         <div class="row">
           <div class="radio">
             <div class="col-md-3">
               <label>
-                <input type="radio" class="method" name="delivery" value="2" checked>
+                <input type="radio" name="method" value="2" checked>
                 <img src="img/delivery.png" alt="delivery">
                 Delivery
               </label>
@@ -27,7 +27,7 @@
           <div class="radio">
             <div class="col-md-3">
               <label>
-                <input type="radio" class="method" name="takeout" value="1">
+                <input type="radio" name="method" value="1">
                 <img src="img/takeout.png" alt="takeout">
                 Takeout
               </label>
@@ -89,55 +89,67 @@
           <br>
           <br>
           <br>
-          
-          <span class="btn btn-primary" id="add-pie">Add Another Pizza</span>
-        </div>
-        <div class="pizzas">
-          <ul>Your Pizza(s)
-
-          </ul>
-        </div>
-        <div class="row">
-          <h2>Contact</h2>
-          <div class="col-md-6">
-            <form id="new-contact">
-              <div class="form-group">
-               <label for="new-first-name">First name</label>
-               <input type="text" class="form-control" id="new-first-name">
-             </div>
-              <div class="form-group">
-               <label for="new-last-name">Last name</label>
-               <input type="text" class="form-control" id="new-last-name">
-             </div>
-
-              <div class="new-address">
-                <div class="form-group">
-                 <label for="new-street">Street</label>
-                 <input type="text" class="form-control new-street">
-               </div>
-                <div class="form-group">
-                 <label for="new-city">City</label>
-                 <input type="text" class="form-control new-city">
-               </div>
-                <div class="form-group">
-                 <label for="new-state">State</label>
-                 <input type="text" class="form=control new-state">
-               </div>
-                <div class="form-group">
-                 <label for="new-phone">Phone</label>
-                 <input type="text" class="form=control new-phone">
-               </div>
-                <div class="form-group">
-                 <label for="new-email">Email</label>
-                 <input type="text" class="form=control new-email">
-               </div>
-            </form>
+          <div class="row">
+            <button type='click' class="btn" id="add-pie">Add Pizza</button>
           </div>
-
-           <button type="submit" class="btn">Add</button>
-         </form>
         </div>
+      </form>
+        <span id="pizzas">
+          <h1>Your Pizza(s)</h1>
+          <p>Delivery or Takeout: <span class="method"></span></p>
+          <p>Size: <span class="size"></span></p>
+          <p>Cheese: <span class="cheese"></span></p>
+          <p>Crust: <span class="crust"></span></p>
+          <p>Toppings: <span class="toppings"></span></p>
+          <p>Total Price: <span class="price"></span></p>
+        </span>
+      <h2>Contact</h2>
+      <form id="new-contact">
+        <div class="row">
+          <div class="column">
+            <div class="form-group">
+             <label for="new-first-name">First name</label>
+             <input type="text" class="form-control" id="new-first-name">
+            </div>
+            <div class="form-group">
+             <label for="new-last-name">Last name</label>
+             <input type="text" class="form-control" id="new-last-name">
+            </div>
+          </div>
+          <div class"column">
+            <div class="form-group">
+             <label for="new-phone">Phone</label>
+             <input type="text" class="form=control" id="new-phone">
+            </div>
+            <div class="form-group">
+             <label for="new-email">Email</label>
+             <input type="text" class="form=control" id="new-email">
+            </div>
+          </div>
+          <div class="column">
+            <div class="form-group">
+             <label for="new-street">Street</label>
+             <input type="text" class="form-control" id="new-street">
+            </div>
+            <div class="form-group">
+             <label for="new-city">City</label>
+             <input type="text" class="form-control" id="new-city">
+            </div>
+            <div class="form-group">
+             <label for="new-state">State</label>
+             <input type="text" class="form=control" id="new-state">
+            </div>
+            <div class="form-group">
+             <label for="new-zip">Zip Code</label>
+             <input type="text" class="form=control" id="new-zip">
+            </div>
+          </div>
         </div>
+      </form>
+      <div class="row">
+        <button type="submit" class="btn" id="submit-order">Submit Order</button>
+        <br>
+        <p>*at this time we only accept cash money.</p>
       </div>
     </div>
   </body>
