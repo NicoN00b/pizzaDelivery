@@ -1,0 +1,14 @@
+img {
+  max-width: 30px;
+  max-height: 30px;
+}
+.jumbotron {
+  background-color: crimson;
+  width: 100%;
+}
+.form {
+  margin-left: 15px;
+}
+.pizzas {
+  display: none;
+}

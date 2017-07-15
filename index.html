@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza the Hutt</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>Pizza the Hutt: Criminally Good Pizza!</h1>
+      </div>
+      <div class="form" id="new-pie">
+        <div class="row">
+          <div class="radio">
+            <div class="col-md-3">
+              <label>
+                <input type="radio" class="method" name="delivery" value="2" checked>
+                <img src="img/delivery.png" alt="delivery">
+                Delivery
+              </label>
+            </div>
+          </div>
+          <div class="radio">
+            <div class="col-md-3">
+              <label>
+                <input type="radio" class="method" name="takeout" value="1">
+                <img src="img/takeout.png" alt="takeout">
+                Takeout
+              </label>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <select class="form-control" id="size">
+              <option value="10">Small - $10 </option>
+              <option value="14">Medium - $14</option>
+              <option value="16"> Large - $16</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="form-control" id="cheese">
+              <option value="0">Five-Cheese Blend - Gf</option>
+              <option value="0">Aged Cashew Cheese - V, Gf</option>
+              <option value="-1">No Cheese</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="form-control" id="crust">
+              <option value="0">Hand-Tossed Crust </option>
+              <option value="2">Gluten-Free Crust +$2</option>
+              <option value="2">Detroit Style Crust +$2</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <h2>Topping</h2>
+          <p>each topping is $1</p>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Columbia Cured Pepperoni - Gf<br>
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Wild Cascade Sausage - Gf<br>
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Felony Flats Wild Mushroom Steaks - V, Gf<br>
+            </div>
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Organic Argula<br>
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">House Roasted Garlic<br>
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Columbia Cured Bacon<br>
+            </div>
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Fresh Basil<br>
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Roasted Hot Peppers *caution<br>
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Mixed Bell Peppers<br>
+            </div>
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Vine Ripened Olives<br>
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Young Olives<br>
+              <input type="checkbox" name="toppings" value="1" class="sum" id="toppings">Roasted Walnut Meat, V, Gf
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          
+          <span class="btn btn-primary" id="add-pie">Add Another Pizza</span>
+        </div>
+        <div class="pizzas">
+          <ul>Your Pizza(s)
+
+          </ul>
+        </div>
+        <div class="row">
+          <h2>Contact</h2>
+          <div class="col-md-6">
+            <form id="new-contact">
+              <div class="form-group">
+               <label for="new-first-name">First name</label>
+               <input type="text" class="form-control" id="new-first-name">
+             </div>
+              <div class="form-group">
+               <label for="new-last-name">Last name</label>
+               <input type="text" class="form-control" id="new-last-name">
+             </div>
+
+              <div class="new-address">
+                <div class="form-group">
+                 <label for="new-street">Street</label>
+                 <input type="text" class="form-control new-street">
+               </div>
+                <div class="form-group">
+                 <label for="new-city">City</label>
+                 <input type="text" class="form-control new-city">
+               </div>
+                <div class="form-group">
+                 <label for="new-state">State</label>
+                 <input type="text" class="form=control new-state">
+               </div>
+                <div class="form-group">
+                 <label for="new-phone">Phone</label>
+                 <input type="text" class="form=control new-phone">
+               </div>
+                <div class="form-group">
+                 <label for="new-email">Email</label>
+                 <input type="text" class="form=control new-email">
+               </div>
+            </form>
+          </div>
+
+           <button type="submit" class="btn">Add</button>
+         </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
