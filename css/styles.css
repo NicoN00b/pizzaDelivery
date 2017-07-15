@@ -26,3 +26,7 @@ input[type="text"] {
   background-color: crimson;
   color: white;
 }
+.btn {
+  margin-left: 15px;
+  color: white;
+}
