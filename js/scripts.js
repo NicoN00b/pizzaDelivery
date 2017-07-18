@@ -4,7 +4,7 @@ function Pizza(method, size, cheese, crust, toppings) {
     this.size = size;
     this.cheese = cheese;
     this.crust = crust;
-    this.toppings = [];
+    this.toppings = toppings;
 }
 
 Pizza.prototype.price = function() {
@@ -12,11 +12,11 @@ Pizza.prototype.price = function() {
   return price;
 };
 
-Pizza.prototype.yourPizza = function() {
-  var yourPizza = this.method + this.size + this.cheese + this.crust + this.toppings;
-  return yourPizza;
+//Pizza.prototype.yourPizza = function() {
+  // var yourPizza = this.method + this.size + this.cheese + this.crust + this.toppings;
+  // return yourPizza;
 
-};
+// };
 
 function resetFields() {
     $("input:radio[name='method']:checked").val("");
@@ -47,27 +47,30 @@ $(document).ready(function() {
     $("#new-pie").append(pizzas)
       event.preventDefault();
 
+      //var toppings = [];
       var inputtedMethod = parseInt($("input:radio[name='method']:checked").val());
       var inputtedSize = parseInt($("select#size").val());
       var inputtedCheese = parseInt($("select#cheese").val());
       var inputtedCrust = parseInt($("select#crust").val());
-      var inputtedToppings = parseInt($("input:checkbox[name=toppings]:checked")).each(function() {
-        return (this).val();
-      }).get();
+      var inputtedToppings = $("input:checkbox[name=toppings]:checked").each(function() {
+        //return inputtedToppings.$(this).val();
+        var toppings = [];
+      });
+
 
       var newPizza = new Pizza(inputtedMethod, inputtedSize, inputtedCheese, inputtedCrust, inputtedToppings);
 
-      Pizza.price();
+      newPizza.price();
 
       console.log(newPizza);
 
       $("#pizzas").show(Pizza);
-      $(".method").text(yourPizza.method);
-      $(".size").text(yourPizza.size);
-      $(".cheese").text(yourPizza.cheese);
-      $(".crust").text(yourPizza.crust);
-      $(".toppings").text(yourPizza.toppings);
-      $(".price").text("$" + Pizza.price() + ".00");
+      $(".method").text(newPizza.method);
+      $(".size").text(newPizza.size);
+      $(".cheese").text(newPizza.cheese);
+      $(".crust").text(newPizza.crust);
+      $(".toppings").text(newPizza.toppings);
+      $(".price").text("$" + newPizza.price() + ".00");
 
       resetFields();
 

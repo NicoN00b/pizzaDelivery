@@ -9007,7 +9007,7 @@ jQuery.extend( {
 			.replace( rprotocol, location.protocol + "//" );
 
 		// Alias method option to type as per ticket #12004
-		s.type = options.method || options.type || s.method || s.type;
+		//s.type = options.method || options.type || s.method || s.type;
 
 		// Extract dataTypes list
 		s.dataTypes = ( s.dataType || "*" ).toLowerCase().match( rnothtmlwhite ) || [ "" ];
