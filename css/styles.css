@@ -21,6 +21,7 @@ input[type="text"] {
 #add-pie {
   align-items: left;
   background-color: crimson;
+  color: white;
 }
 #submit-order {
   background-color: crimson;

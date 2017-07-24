@@ -27,7 +27,7 @@
           <div class="radio">
             <div class="col-md-3">
               <label>
-                <input type="radio" name="method" value="1">
+                <input type="radio" name="method" value="0">
                 <img src="img/takeout.png" alt="takeout">
                 Takeout
               </label>
@@ -39,23 +39,23 @@
         <div class="row">
           <div class="col-md-4">
             <select class="form-control" id="size">
-              <option value="10">Small - $10 </option>
-              <option value="14">Medium - $14</option>
-              <option value="16"> Large - $16</option>
+              <option name="Small" value="10">Small - $10 </option>
+              <option name="Medium" value="14">Medium - $14</option>
+              <option name="Large" value="16"> Large - $16</option>
             </select>
           </div>
           <div class="col-md-4">
             <select class="form-control" id="cheese">
-              <option value="0">Five-Cheese Blend - Gf</option>
-              <option value="0">Aged Cashew Cheese - V, Gf</option>
-              <option value="-1">No Cheese</option>
+              <option name="Five-Cheese Blend" value="0">Five-Cheese Blend - Gf</option>
+              <option name="Aged Cashew Cheese" value="0">Aged Cashew Cheese - V, Gf</option>
+              <option name="No Cheese" value="-1">No Cheese</option>
             </select>
           </div>
           <div class="col-md-4">
             <select class="form-control" id="crust">
-              <option value="0">Hand-Tossed Crust </option>
-              <option value="2">Gluten-Free Crust +$2</option>
-              <option value="2">Detroit Style Crust +$2</option>
+              <option name="Hand-Tossed Crust" value="0">Hand-Tossed Crust </option>
+              <option name="Gluten-Free Crust" value="2">Gluten-Free Crust +$2</option>
+              <option name="Detroit Style Crust" value="2">Detroit Style Crust +$2</option>
             </select>
           </div>
         </div>
@@ -102,6 +102,7 @@
           <p>Crust: <span class="crust"></span></p>
           <p>Toppings: <span class="toppings"></span></p>
           <p>Total Price: <span class="price"></span></p>
+
         </span>
       <h2>Contact</h2>
       <form id="new-contact">

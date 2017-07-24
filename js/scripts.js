@@ -18,13 +18,13 @@ Pizza.prototype.price = function() {
 
 // };
 
-function resetFields() {
-    $("input:radio[name='method']:checked").val("");
-    $("select#size").val("");
-    $("select#cheese").val("");
-    $("select#crust").val("");
-    $("input:checkbox[name='toppings']:checked").val("");
-}
+// function resetFields() {
+//     $("input:radio[name='method']:checked").val("");
+//     $("select#size").val("");
+//     $("select#cheese").val("");
+//     $("select#crust").val("");
+//     $("input:checkbox[name='toppings']:checked").val("");
+// }
 
 function Contact(first, last, address, phone, email) {
     this.firstName = first;
@@ -54,7 +54,7 @@ $(document).ready(function() {
       var inputtedCrust = parseInt($("select#crust").val());
       var inputtedToppings = $("input:checkbox[name=toppings]:checked").each(function() {
         //return inputtedToppings.$(this).val();
-        var toppings = [];
+        //var toppings = [];
       });
 
 
@@ -69,13 +69,14 @@ $(document).ready(function() {
       $(".size").text(newPizza.size);
       $(".cheese").text(newPizza.cheese);
       $(".crust").text(newPizza.crust);
-      $(".toppings").text(newPizza.toppings);
+      $(".toppings").text(newPizza.toppings.length);
       $(".price").text("$" + newPizza.price() + ".00");
 
-      resetFields();
+      document.getElementById("new-pie").reset();
 
   });
 
+  $('#submit-order').submit(function() {
     $(".new-contact").each(function() {
       var inputtedStreet = $(this).find("input.new-street").val();
       var inputtedCity = $(this).find("input.new-city").val();
@@ -86,5 +87,5 @@ $(document).ready(function() {
 
 
 
-
+  });
 });
