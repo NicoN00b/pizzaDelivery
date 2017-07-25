@@ -47,14 +47,11 @@ $(document).ready(function() {
     $("#new-pie").append(pizzas)
       event.preventDefault();
 
-      //var toppings = [];
       var inputtedMethod = parseInt($("input:radio[name='method']:checked").val());
       var inputtedSize = parseInt($("select#size").val());
       var inputtedCheese = parseInt($("select#cheese").val());
       var inputtedCrust = parseInt($("select#crust").val());
       var inputtedToppings = $("input:checkbox[name=toppings]:checked").each(function() {
-        //return inputtedToppings.$(this).val();
-        //var toppings = [];
       });
 
 
